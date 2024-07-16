@@ -1,0 +1,249 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(90deg, #c0ed4c, #4b7a8a);
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header-left p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.header-right nav a {
+    margin-left: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    height: calc(100vh - 100px);
+    animation: slideInMain 1s ease-in-out;
+}
+
+@keyframes slideInMain {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+}
+
+.content {
+    position: relative;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-background {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 300px;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: transform 0.5s, background-color 0.5s;
+    backface-visibility: hidden;
+    animation: fadeInTextBackground 1s ease-in-out;
+}
+
+@keyframes fadeInTextBackground {
+    from { opacity: 0; transform: rotateY(-180deg); }
+    to { opacity: 1; transform: rotateY(0); }
+}
+
+.text-background.hidden {
+    display: none;
+}
+
+.text-background h2 {
+    font-size: 48px;
+    color: #AEEA00;
+    margin: 0;
+}
+
+.text-background p {
+    font-size: 24px;
+    color: #AEEA00;
+    margin: 0;
+}
+
+#toggleTextBackgroundButton {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggleTextBackgroundButton:hover {
+    background-color: #e64a19;
+}
+
+aside {
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    animation: fadeInAside 1s ease-in-out;
+}
+
+@keyframes fadeInAside {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.info {
+    margin-top: 20px;
+}
+
+.info p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 100%;
+    align-items: center;
+    animation: fadeInForm 1s ease-in-out;
+}
+
+@keyframes fadeInForm {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+form input:focus {
+    background-color: #e0f7fa;
+}
+
+form button {
+    padding: 10px;
+    background-color: #00C853;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #00a152;
+}
+
+.rectangle {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    background: url('path_to_your_image.jpg') no-repeat center center;
+    background-size: cover;
+    margin-top: 10px;
+    border-radius: 5px;
+    transition: transform 0.5s, background-color 0.5s;
+    backface-visibility: hidden;
+    animation: fadeInRectangle 1s ease-in-out;
+}
+
+@keyframes fadeInRectangle {
+    from { opacity: 0; transform: rotateY(-180deg); }
+    to { opacity: 1; transform: rotateY(0); }
+}
+
+.rectangle.hidden {
+    display: none;
+}
+
+#toggleRectangleButton {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#toggleRectangleButton:hover {
+    background-color: #e64a19;
+}
+
+#startPresentationContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#startPresentationButton {
+    padding: 20px 40px;
+    background-color: #FF5722;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#startPresentationButton:hover {
+    background-color: #e64a19;
+}
+
+#newImage {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
